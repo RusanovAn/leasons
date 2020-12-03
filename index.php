@@ -43,10 +43,5 @@
         в шаблонах которых используется Lorem Ipsum.</p>
 </div>
 
-<?php
-
-$res=file_get_contents('https://maps.googleapis.com/maps/api/directions/json?origin=Chicago,IL&destination=Los+Angeles,CA&key=AIzaSyAi1U1z4eonSUIfR077tGDBinU0FRJKb_U');
-print_r(json_decode($res));
-?>
 </body>
 </html>
