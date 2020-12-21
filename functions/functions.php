@@ -1,33 +1,30 @@
 <?php
 
-function userData(array &$array)
+function userData(array &$array): void
 {
     $array['user']='Petya';
     $array['age']='28';
 
 }
 
-function mailProvider($emailProvider)
+function mailProvider(string $emailProvider): void
 {
-    if (isset($emailProvider)) {
-        $emailProvider=trim($emailProvider);
-        switch ($emailProvider) {
-            case 'GMAIL':
-                echo 'Я GMAIL <br>';
-                break;
-            case 'MAILRU':
-                echo 'Я MAILRU<br>';
-                break;
-            case 'YANDEX':
-                echo 'Я YANDEX <br>';
-                break;
-            case '':
-                echo 'Поле Провайдер не заполнено  <br>';
-                break;
-            default:
-                echo "Провайдер {$emailProvider} не поддерживается <br>";
-        }
-    } else {
-        echo 'Поле Провайдер не существует <br>';
+    $emailProvider=trim($emailProvider);
+    switch ($emailProvider) {
+        case 'GMAIL':
+            echo 'Я GMAIL <br>';
+            break;
+        case 'MAILRU':
+            echo 'Я MAILRU<br>';
+            break;
+        case 'YANDEX':
+            echo 'Я YANDEX <br>';
+            break;
+        case '':
+            echo 'Поле Провайдер не заполнено  <br>';
+            break;
+        default:
+            echo "Провайдер {$emailProvider} не поддерживается <br>";
     }
+
 }
